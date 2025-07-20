@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  background-color: rgb(9, 31, 9);
+}
+
+#woodfood{
+  height: 400px;
+  width: 1000px;
+  /* top: 400px;
+  float: right; */
+  /* object-fit: contain; */
+}
+
+#recipe{
+  position: absolute;
+  margin-top: 500px;
+  width: 400px;
+  height: 400px;
+  border: black;
+  border-radius: 25px;
+  background-color: white;
+}
+
+
+
+ 
