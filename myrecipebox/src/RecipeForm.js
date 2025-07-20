@@ -4,10 +4,10 @@ import { useState } from "react";
 function RecipeForm() {
 
     const [formData, setFormData] = useState({
-        name: "blue album",
-        ingredients: "weezer",
-        directions: "rock",
-        image: "weezer.jpg",
+        name: "name",
+        ingredients: "ingredients",
+        directions: "directions",
+        image: "image",
     })
 
 
@@ -48,10 +48,13 @@ function RecipeForm() {
     }
 
 
+   
+
 
 
     function handleSubmit(e) {
         e.preventDefault()
+        console.log(formData)
         fetch("http://localhost:9292/recipes", {
             method: "POST", 
             headers: {
@@ -69,11 +72,12 @@ function RecipeForm() {
 
     return(
         <div>
-            <form onSubmit={handleSubmit}>
-                <input onChange={handleNameChange} type="text" value={formData.name}></input>
-                <input onChange={handleIngredientsChange} type="text" value={formData.ingredients}></input>
-                <input onChange={handleDirectionsChange} type="text" value={formData.directions}></input>
-                <input onChange={handleImageChange} type="text" value={formData.image}></input>
+            <form id="form" onSubmit={handleSubmit}>
+                <h3>Add a Recipe</h3>
+                <input onChange={handleNameChange} type="text" value={formData.name}></input><br></br>
+                <input onChange={handleIngredientsChange} type="text" value={formData.ingredients}></input><br></br>
+                <input onChange={handleDirectionsChange} type="text" value={formData.directions}></input><br></br>
+                <input onChange={handleImageChange} type="text" value={formData.image}></input><br></br>
                 <input type="submit" value="submit"></input>
              </form>
         </div>

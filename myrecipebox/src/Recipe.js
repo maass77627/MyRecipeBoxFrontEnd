@@ -3,12 +3,23 @@ import React from "react";
 function Recipe ({recipe}) {
 console.log(recipe)
 
+// const divStyle = {
+//     backgroundImage: `url(${recipe.image})`,
+//     backgroundOpacity: 0.1, 
+//     backgroundSize: 'cover', 
+//     backgroundPosition: 'center', 
+//     // width: '100%',
+//     // height: '300px', 
+// }
+
     return(
-        <div id="recipe">
+        <div id="recipe" >
+            <img id="recimage" src={recipe.image} alt="food"></img>
             <h1>{recipe.name}</h1>
-            <p>{recipe.directions}</p>
+            
             <p>{recipe.ingredients}</p>
-            <img src={recipe.image} alt="food"></img>
+            <p>{recipe.directions}</p>
+            {/* <img src={recipe.image} alt="food"></img> */}
         </div>
     )
 

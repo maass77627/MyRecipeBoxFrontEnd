@@ -4,6 +4,7 @@
 import './App.css';
 import RecipeContainer from "./RecipeContainer";
 import RecipeForm from './RecipeForm';
+import Categories from './Categories';
 
 function App() {
 
@@ -31,11 +32,13 @@ function App() {
 
   return (
     <div className="App">
-      <img id="woodfood" src="woodfood.jpg"></img>
+      <img id="logo" src="MyRecipeBox.png"></img>
+      <img id="woodfood" src="woodfood.jpg" alt="food"></img>
       
-        <h1>"My Recipe Box"</h1>
+        {/* <h1>"My Recipe Box"</h1> */}
         <RecipeContainer  recipes={recipes}></RecipeContainer>
         <RecipeForm></RecipeForm>
+        <Categories></Categories>
      
     </div>
   );
