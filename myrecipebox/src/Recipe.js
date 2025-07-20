@@ -16,8 +16,9 @@ console.log(recipe)
         <div id="recipe" >
             <img id="recimage" src={recipe.image} alt="food"></img>
             <h1>{recipe.name}</h1>
-            
+            <h4 id="h4">Ingredients:</h4>
             <p>{recipe.ingredients}</p>
+             <h4 id="h4">Directions:</h4> 
             <p>{recipe.directions}</p>
             {/* <img src={recipe.image} alt="food"></img> */}
         </div>
