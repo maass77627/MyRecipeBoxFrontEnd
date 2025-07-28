@@ -13,11 +13,7 @@ function App() {
   const [ categories, setCategories ] = useState([])
 
   
-  
-
-  
-
-    useEffect(() => {
+  useEffect(() => {
       fetch("http://localhost:9292/recipes")
       .then((response) => response.json())
       .then((json) => {
@@ -39,20 +35,13 @@ function App() {
   }, [])
 
 
-
-
-
-
-
-
-
-  return (
+ return (
     <div className="App">
       <img id="logo" src="MyRecipeBox.png" alt="logo"></img>
       <img id="woodfood" src="woodfood.jpg" alt="food"></img>
-        <RecipeContainer  recipes={recipes}></RecipeContainer>
+        <RecipeContainer setRecipes={setRecipes}  recipes={recipes}></RecipeContainer>
         <RecipeForm></RecipeForm>
-        <Categories categories={categories}></Categories>
+        <Categories recipes={recipes} categories={categories}></Categories>
      
     </div>
   );

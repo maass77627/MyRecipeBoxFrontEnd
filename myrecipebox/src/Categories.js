@@ -1,13 +1,28 @@
 import React from "react";
 import Category from "./Category";
+import { useState } from "react";
 
 
-function Categories({categories}) {
+function Categories({categories, recipes}) {
+    const [ option, setOption ] = useState("")
+
+    function handleChange(e) {
+                setOption(e.target.value)
+                console.log(option)
+        
+              }
 
 
     return(
         <div id="categories">
-                {categories.map((category) => <Category key={category.id} category={category}></Category>)}
+                <select value={option} onChange={handleChange}>
+                {categories.map((category) =>  
+            <option value={category.name}>
+            {category.name}
+            </option>
+            )}
+            </select>
+            <Category recipes={recipes} option={option}></Category>
         </div>
     )
 }

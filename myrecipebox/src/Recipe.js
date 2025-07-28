@@ -1,26 +1,36 @@
 import React from "react";
 
-function Recipe ({recipe}) {
+function Recipe ({recipe, recipes, setRecipes}) {
 console.log(recipe)
+console.log(recipes)
 
-// const divStyle = {
-//     backgroundImage: `url(${recipe.image})`,
-//     backgroundOpacity: 0.1, 
-//     backgroundSize: 'cover', 
-//     backgroundPosition: 'center', 
-//     // width: '100%',
-//     // height: '300px', 
-// }
+console.log(recipe, setRecipes, recipes)
+
+function handleDelete(id) {
+    console.log(id)
+    fetch(`http://localhost:9292/recipes/${id}`, {
+        method: "DELETE",
+    })
+    let newrecipes = recipes.filter((rec) => rec.id !== id )
+    setRecipes(newrecipes)
+
+}
+
+function handleEdit(){
+
+}
 
     return(
         <div id="recipe" >
             <img id="recimage" src={recipe.image} alt="food"></img>
-            <h1>{recipe.name}</h1>
+            <h1>{recipe.name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</h1>
             <h4 id="h4">Ingredients:</h4>
             <p>{recipe.ingredients}</p>
              <h4 id="h4">Directions:</h4> 
             <p>{recipe.directions}</p>
-            {/* <img src={recipe.image} alt="food"></img> */}
+            <button onClick={() => handleDelete(recipe.id)}>delete</button>
+            <button onClick={handleEdit}>edit</button>
+            
         </div>
     )
 

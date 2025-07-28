@@ -57,7 +57,6 @@ function RecipeForm() {
         console.log(formData)
         fetch("http://localhost:9292/recipes", {
             method: "POST", 
-            // mode: 'no-cors',
             headers: {
                 "Content-Type" : "application/json"
             }, 
