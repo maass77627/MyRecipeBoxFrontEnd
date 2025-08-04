@@ -22,7 +22,7 @@ function Categories({categories, recipes}) {
             </option>
             )}
             </select>
-            <Category recipes={recipes} option={option}></Category>
+            <Category key={option} recipes={recipes} option={option}></Category>
         </div>
     )
 }

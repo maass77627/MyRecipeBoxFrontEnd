@@ -1,7 +1,7 @@
 import React from "react";
 import Recipe from "./Recipe";
 
-function RecipeContainer({ setRecipes, recipes}) {
+function RecipeContainer({ setRecipes, recipes }) {
 console.log(recipes)
 
 

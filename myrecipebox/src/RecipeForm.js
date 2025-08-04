@@ -8,6 +8,7 @@ function RecipeForm() {
         ingredients: "ingredients",
         directions: "directions",
         image: "image",
+        category: "category",
     })
 
 
@@ -47,10 +48,14 @@ function RecipeForm() {
 
     }
 
+    function handleCategoryChange(e) {
+        setFormData({
+            ...formData,
+            category: e.target.value 
 
-   
+        })
 
-
+    }
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -70,6 +75,29 @@ function RecipeForm() {
 
     }
 
+
+   
+
+
+
+    // function handleSubmit(e) {
+    //     e.preventDefault()
+    //     console.log(formData)
+    //     fetch("http://localhost:9292/recipes", {
+    //         method: "POST", 
+    //         headers: {
+    //             "Content-Type" : "application/json"
+    //         }, 
+    //         body: JSON.stringify(formData)
+    //     })
+    //     .then((response) => response.json())
+    //     .then((json) => {
+    //         console.log(json)
+    //     })
+
+
+    // }
+
     return(
         <div>
             <form id="form" onSubmit={handleSubmit}>
@@ -78,6 +106,7 @@ function RecipeForm() {
                 <input onChange={handleIngredientsChange} type="text" value={formData.ingredients}></input><br></br>
                 <input onChange={handleDirectionsChange} type="text" value={formData.directions}></input><br></br>
                 <input onChange={handleImageChange} type="text" value={formData.image}></input><br></br>
+                <input onChange={handleCategoryChange} type="text" value={formData.category}></input><br></br>
                 <input type="submit" value="submit"></input>
              </form>
         </div>
