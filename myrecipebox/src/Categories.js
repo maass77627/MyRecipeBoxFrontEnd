@@ -14,15 +14,15 @@ function Categories({categories, recipes}) {
 
 
     return(
-        <div id="categories">
+        <div className="scroll" id="categories">
                 <select value={option} onChange={handleChange}>
                 {categories.map((category) =>  
-            <option value={category.name}>
+            <option key={category.id} value={category.name}>
             {category.name}
             </option>
             )}
             </select>
-            <Category key={option} recipes={recipes} option={option}></Category>
+            <Category key={option} categories={categories} recipes={recipes} option={option}></Category>
         </div>
     )
 }

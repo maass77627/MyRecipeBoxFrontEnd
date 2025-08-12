@@ -1,17 +1,25 @@
 import React from "react";
+//import { useState } from "react";
 
-function Category({recipes, option}) {
+function Category({recipes, option, categories}) {
 console.log(recipes)
 console.log(option)
+console.log(categories)
 
- let newrecipes = recipes.filter((rec) => rec.option === option)
- console.log(newrecipes)
+// /const [ newrecs, setNewRecs ] = useState()
+
+
+
+  let newcat = categories.find((cat) => cat.name === option) 
+   console.log(newcat)
+ let newrecs = newcat ? recipes.filter((recs) => recs.category_id === newcat.id) : recipes;
+  console.log(newrecs)
 
     return(
 
-        <div>
-            {newrecipes.map((rec) => 
-            <div id="category">
+        <div  id="filter">
+            {newrecs.map((rec) => 
+            <div id="recipe">
              <img id="recimage" src={rec.image} alt="food"></img>
             <h1>{rec.name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</h1>
             <h4 id="h4">Ingredients:</h4>

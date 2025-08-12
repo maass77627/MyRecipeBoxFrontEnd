@@ -1,14 +1,16 @@
 import React from "react";
 import { useState } from "react";
 
-function RecipeForm() {
+function RecipeForm({ recipes, setRecipes, categories }) {
+    console.log(categories)
 
     const [formData, setFormData] = useState({
         name: "name",
         ingredients: "ingredients",
         directions: "directions",
+        category_id: 26,
         image: "image",
-        category: "category",
+        
     })
 
 
@@ -51,7 +53,7 @@ function RecipeForm() {
     function handleCategoryChange(e) {
         setFormData({
             ...formData,
-            category: e.target.value 
+            category_id: e.target.value 
 
         })
 
@@ -69,6 +71,8 @@ function RecipeForm() {
         })
         .then((response) => response.json())
         .then((json) => {
+            let newrecipes = [...recipes, json]
+            setRecipes(newrecipes)
             console.log(json)
         })
 
@@ -80,23 +84,7 @@ function RecipeForm() {
 
 
 
-    // function handleSubmit(e) {
-    //     e.preventDefault()
-    //     console.log(formData)
-    //     fetch("http://localhost:9292/recipes", {
-    //         method: "POST", 
-    //         headers: {
-    //             "Content-Type" : "application/json"
-    //         }, 
-    //         body: JSON.stringify(formData)
-    //     })
-    //     .then((response) => response.json())
-    //     .then((json) => {
-    //         console.log(json)
-    //     })
-
-
-    // }
+    
 
     return(
         <div>
@@ -105,8 +93,16 @@ function RecipeForm() {
                 <input onChange={handleNameChange} type="text" value={formData.name}></input><br></br>
                 <input onChange={handleIngredientsChange} type="text" value={formData.ingredients}></input><br></br>
                 <input onChange={handleDirectionsChange} type="text" value={formData.directions}></input><br></br>
+                <select onChange={handleCategoryChange} value={formData.category_id}>
+                { categories ? categories.map((category) =>  
+            <option key={category.id} value={category.id}>
+            {category.name}
+            </option>
+            ) : null}
+                </select>
+                {/* <input onChange={handleCategoryChange} type="text" value={formData.category}></input><br></br> */}
                 <input onChange={handleImageChange} type="text" value={formData.image}></input><br></br>
-                <input onChange={handleCategoryChange} type="text" value={formData.category}></input><br></br>
+                {/* <input onChange={handleCategoryChange} type="text" value={formData.category}></input><br></br> */}
                 <input type="submit" value="submit"></input>
              </form>
         </div>
