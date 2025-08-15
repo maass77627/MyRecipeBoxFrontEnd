@@ -51,6 +51,7 @@ function RecipeForm({ recipes, setRecipes, categories }) {
     }
 
     function handleCategoryChange(e) {
+        console.log(e.target.value)
         setFormData({
             ...formData,
             category_id: e.target.value 
@@ -99,10 +100,10 @@ function RecipeForm({ recipes, setRecipes, categories }) {
             {category.name}
             </option>
             ) : null}
-                </select>
+                </select><br></br>
                 {/* <input onChange={handleCategoryChange} type="text" value={formData.category}></input><br></br> */}
                 <input onChange={handleImageChange} type="text" value={formData.image}></input><br></br>
-                {/* <input onChange={handleCategoryChange} type="text" value={formData.category}></input><br></br> */}
+                
                 <input type="submit" value="submit"></input>
              </form>
         </div>

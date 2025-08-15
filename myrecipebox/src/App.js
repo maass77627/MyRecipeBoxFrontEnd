@@ -40,7 +40,7 @@ function App() {
       <img id="logo" src="MyRecipeBox.png" alt="logo"></img>
       <img id="woodfood" src="woodfood.jpg" alt="food"></img>
         <RecipeContainer setRecipes={setRecipes}  recipes={recipes}></RecipeContainer>
-        <RecipeForm recipes={recipes} setRecipes={setRecipes}></RecipeForm>
+        <RecipeForm categories={categories} recipes={recipes} setRecipes={setRecipes}></RecipeForm>
         <Categories recipes={recipes} categories={categories}></Categories>
      
     </div>

@@ -23,7 +23,8 @@ function handleEdit(){
     return(
         <div id="recipe" >
             <img id="recimage" src={recipe.image} alt="food"></img>
-            <h1>{recipe.name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</h1>
+            <h1>{recipe.name}</h1>
+            {/* <h1>{recipe.name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</h1> */}
             <h4 id="h4">Ingredients:</h4>
             <p>{recipe.ingredients}</p>
              <h4 id="h4">Directions:</h4> 
