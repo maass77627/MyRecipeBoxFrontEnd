@@ -14,8 +14,8 @@ function Categories({categories, recipes}) {
 
 
     return(
-        <div className="scroll" id="categories">
-                <select value={option} onChange={handleChange}>
+        <div className="scroll" id="recipecontainer" >
+                <select id="select" value={option} onChange={handleChange}>
                 {categories.map((category) =>  
             <option key={category.id} value={category.name}>
             {category.name}

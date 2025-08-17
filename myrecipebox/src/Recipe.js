@@ -20,18 +20,19 @@ function handleEdit(){
 
 }
 
+
+   
+
     return(
         <div id="recipe" >
             <img id="recimage" src={recipe.image} alt="food"></img>
             <h1>{recipe.name}</h1>
-            {/* <h1>{recipe.name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</h1> */}
             <h4 id="h4">Ingredients:</h4>
             <p>{recipe.ingredients}</p>
-             <h4 id="h4">Directions:</h4> 
+            <h4 id="h4">Directions:</h4> 
             <p>{recipe.directions}</p>
-            <button onClick={() => handleDelete(recipe.id)}>delete</button>
-            <button onClick={handleEdit}>edit</button>
-            
+            <button id="btn" onClick={() => handleDelete(recipe.id)}>delete</button>
+            <button id="btn" onClick={handleEdit}>edit</button>
         </div>
     )
 
