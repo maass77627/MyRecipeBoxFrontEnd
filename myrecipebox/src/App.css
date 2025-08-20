@@ -10,17 +10,13 @@
 }
 
 #recipecontainer {
-  background-color: rgb(236, 166, 36);
+  background-color: rgb(248, 142, 4);
   display: flex;
   justify-content: center;
   overflow-x: auto;
   white-space: nowrap;
-  /* display: inline-block;
-  border: 3px solid #fff;
-  padding: 20px; */
   height: 600px;
   justify-content: flex-start;
-  /* width: 2000px;  */
 }
 
 #recimage{
@@ -54,7 +50,6 @@
 }
 
  .scroll {
-  /* white-space: nowrap;  */
   overflow-x: scroll; 
   overflow-y: hidden; 
    -webkit-overflow-scrolling: touch; 
@@ -102,10 +97,8 @@ left: 0px;
  }
 
  #btn{
-  /* position: ; */
   margin-top: 25px;
   padding: 10px;
-  /* top: 300px; */
   margin-left: auto;
   margin-right: auto;
   height: 30px;

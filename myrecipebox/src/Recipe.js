@@ -1,8 +1,7 @@
 import React from "react";
 
 function Recipe ({recipe, recipes, setRecipes}) {
-console.log(recipe)
-console.log(recipes)
+
 
 console.log(recipe, setRecipes, recipes)
 

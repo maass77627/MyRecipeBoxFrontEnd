@@ -22,9 +22,7 @@ function Category({recipes, option, categories}) {
             <p>{rec.directions}</p>
             </div>
             )}
-            
-
-        </>
+          </>
 
 
     )
