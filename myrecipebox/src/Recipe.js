@@ -1,6 +1,10 @@
 import React from "react";
+import RecipeEditForm from "./RecipeEditForm";
+import { useState } from "react";
 
 function Recipe ({recipe, recipes, setRecipes}) {
+
+    const [toggle, setToggle] = useState(false)
 
 
 console.log(recipe, setRecipes, recipes)
@@ -16,6 +20,7 @@ function handleDelete(id) {
 }
 
 function handleEdit(){
+    setToggle(!toggle)
 
 }
 
@@ -31,7 +36,8 @@ function handleEdit(){
             <h4 id="h4">Directions:</h4> 
             <p>{recipe.directions}</p>
             <button id="btn" onClick={() => handleDelete(recipe.id)}>delete</button>
-            <button id="btn" onClick={handleEdit}>edit</button>
+            <button id="btn" onClick={() => handleEdit()}>edit</button> 
+            {toggle ? <RecipeEditForm recipe={recipe} setRecipes={setRecipes} recipes={recipes}></RecipeEditForm> : null}
         </div>
     )
 
