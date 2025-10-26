@@ -118,4 +118,8 @@ left: 0px;
  }
  
 
- 
+ .dinner-container{
+  height: 400px;
+  width: 100%;
+  background-color: blueviolet;
+ }

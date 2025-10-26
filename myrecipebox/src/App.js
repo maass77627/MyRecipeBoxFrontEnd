@@ -6,6 +6,7 @@ import RecipeContainer from "./RecipeContainer";
 import RecipeForm from './RecipeForm';
 import Categories from './Categories';
 import React from "react";
+import DinnerContainer from './DinnerContainer';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
     <div className="App">
       <img id="logo" src="MyRecipeBox.png" alt="logo"></img>
       <img id="woodfood" src="woodfood.jpg" alt="food"></img>
+      <DinnerContainer></DinnerContainer>
         <RecipeContainer setRecipes={setRecipes}  recipes={recipes}></RecipeContainer>
         <RecipeForm categories={categories} recipes={recipes} setRecipes={setRecipes}></RecipeForm>
         <Categories recipes={recipes} categories={categories}></Categories>
