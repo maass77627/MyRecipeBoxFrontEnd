@@ -3,10 +3,13 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import './App.css';
 import RecipeContainer from "./RecipeContainer";
-import RecipeForm from './RecipeForm';
-import Categories from './Categories';
+import Header from './Header';
+import MealPlanner from './MealPlanner';
 import React from "react";
-import DinnerContainer from './DinnerContainer';
+import DinnerFinder from './DinnerFinder';
+import {Routes, Route} from "react-router-dom";
+import AddRecipeForm from './AddRecipeForm';
+import KitchenManager from './KitchenManager';
 
 function App() {
 
@@ -38,12 +41,33 @@ function App() {
 
  return (
     <div className="App">
-      <img id="logo" src="MyRecipeBox.png" alt="logo"></img>
-      <img id="woodfood" src="woodfood.jpg" alt="food"></img>
-      <DinnerContainer></DinnerContainer>
-        <RecipeContainer setRecipes={setRecipes}  recipes={recipes}></RecipeContainer>
-        <RecipeForm categories={categories} recipes={recipes} setRecipes={setRecipes}></RecipeForm>
-        <Categories recipes={recipes} categories={categories}></Categories>
+
+<Header />
+
+
+<Routes>
+  <Route
+    path="/"
+    element={
+      <>
+      <RecipeContainer recipes={recipes} setRecipes={setRecipes} />
+      <DinnerFinder recipes={recipes}/>
+      
+        
+        <MealPlanner recipes={recipes} />
+        <KitchenManager recipes={recipes}></KitchenManager>
+        
+      </>
+    }
+  />
+  <Route
+    path="/add-recipe"
+    element={<AddRecipeForm onAddRecipe={(r) => setRecipes([...recipes, r])} />}
+  />
+  <Route path="/dinner-finder" element={<DinnerFinder recipes={recipes} />} />
+</Routes>
+      
+        
      
     </div>
   );

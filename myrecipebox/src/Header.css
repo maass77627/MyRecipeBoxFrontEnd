@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Pacifico&display=swap");
+
+/* === Overall Header Container === */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #5e5a9c; */
+  background-color: #fff8dc; 
+  background-image: linear-gradient(
+      to bottom,
+      transparent 23px,
+      rgba(0, 0, 255, 0.08) 24px
+    ),
+    linear-gradient(to right, rgba(255, 0, 0, 0.08) 60px, transparent 61px);
+  background-size: 100% 24px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 2rem;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Handlee", cursive;
+}
+
+/* === Left Section (logo + title) === */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  color: #2e2e2e;
+  text-shadow: 1px 1px rgba(255, 123, 123, 0.4);
+}
+
+/* === Navigation Links === */
+.header-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #444;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 200, 150, 0.3);
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  background-color: #ffb6b6;
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 123, 123, 0.3);
+}

@@ -1,0 +1,302 @@
+.add-recipe-container {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  
+  .add-recipe-btn {
+    background: linear-gradient(135deg, #ffa07a, #ff7b7b);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  .add-recipe-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(255, 123, 123, 0.3);
+  }
+  
+ 
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+  }
+  
+  
+  .recipe-card-form {
+    background-color: #fff8dc;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 23px,
+        rgba(0, 0, 255, 0.1) 24px
+      ),
+      linear-gradient(to right, rgba(255, 0, 0, 0.1) 60px, transparent 61px);
+    background-size: 100% 24px;
+    padding: 2rem;
+    width: 380px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    font-family: "Handlee", cursive;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(-90deg);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  }
+  
+  
+  .recipe-card-form.flipped {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  
+  .form-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: "Pacifico", cursive;
+  }
+  
+  
+  .recipe-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .recipe-form label span {
+    margin-bottom: 0.3rem;
+  }
+  
+  .recipe-form input,
+  .recipe-form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background-color: transparent;
+    font-family: "Handlee", cursive;
+    font-size: 1rem;
+    line-height: 1.5;
+    outline: none;
+    resize: none;
+  }
+  
+  .recipe-form input:focus,
+  .recipe-form textarea:focus {
+    border-bottom-color: #ff7b7b;
+  }
+  
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+  }
+  
+  .save-btn,
+  .cancel-btn {
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  
+  .save-btn {
+    background-color: #ff7b7b;
+    color: white;
+  }
+  
+  .cancel-btn {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  .save-btn:hover {
+    background-color: #ff5050;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #ccc;
+  }
+
+  /* === Container === */
+.add-recipe-container {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  /* === Trigger Button === */
+  .add-recipe-btn {
+    background: linear-gradient(135deg, #ffa07a, #ff7b7b);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  .add-recipe-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(255, 123, 123, 0.3);
+  }
+  
+  /* === Overlay Background === */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+  }
+  
+  /* === Recipe Card Form === */
+  .recipe-card-form {
+    background-color: #fff8dc;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 23px,
+        rgba(0, 0, 255, 0.1) 24px
+      ),
+      linear-gradient(to right, rgba(255, 0, 0, 0.1) 60px, transparent 61px);
+    background-size: 100% 24px;
+    padding: 2rem;
+    width: 380px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    font-family: "Handlee", cursive;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(-90deg);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  }
+  
+  /* Flip open animation */
+  .recipe-card-form.flipped {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  
+  /* === Title === */
+  .form-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: "Pacifico", cursive;
+  }
+  
+  /* === Form Fields === */
+  .recipe-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .recipe-form label span {
+    margin-bottom: 0.3rem;
+  }
+  
+  .recipe-form input,
+  .recipe-form textarea,
+  .recipe-form select {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background-color: transparent;
+    font-family: "Handlee", cursive;
+    font-size: 1rem;
+    line-height: 1.5;
+    outline: none;
+    resize: none;
+    transition: border-bottom-color 0.2s ease;
+  }
+  
+  /* Focus and hover effects */
+  .recipe-form input:focus,
+  .recipe-form textarea:focus,
+  .recipe-form select:focus {
+    border-bottom-color: #ff7b7b;
+  }
+  
+  /* === Dropdown styling === */
+  .recipe-form select {
+    cursor: pointer;
+    padding: 0.3rem 0;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23ff7b7b' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: 1.2rem;
+  }
+  
+  /* === Buttons === */
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+  }
+  
+  .save-btn,
+  .cancel-btn {
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+  }
+  
+  /* Save button */
+  .save-btn {
+    background-color: #ff7b7b;
+    color: white;
+  }
+  
+  .save-btn:hover {
+    background-color: #ff5050;
+    transform: translateY(-2px);
+  }
+  
+  /* Cancel button */
+  .cancel-btn {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #ccc;
+    transform: translateY(-2px);
+  }
+  
+  /* === Font Imports === */
+  @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Pacifico&display=swap");

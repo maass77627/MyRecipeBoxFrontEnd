@@ -1,0 +1,55 @@
+.recipe-filter {
+    width: 100%;
+    max-width: 700px;
+    margin: 1rem auto 0.5rem;
+    padding: 1rem 1.5rem;
+    background-color: #fff8dc;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 23px,
+        rgba(0, 0, 255, 0.08) 24px
+      ),
+      linear-gradient(to right, rgba(255, 0, 0, 0.1) 60px, transparent 61px);
+    background-size: 100% 24px;
+    border-radius: 15px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    font-family: "Handlee", cursive;
+  }
+  
+  .filter-title {
+    font-size: 1.3rem;
+    font-family: "Pacifico", cursive;
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+  
+  .filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .filter-input,
+  .filter-select {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    font-family: "Handlee", cursive;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  
+  .filter-input:focus,
+  .filter-select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 123, 123, 0.3);
+    transform: scale(1.02);
+  }
+  
+  .filter-select {
+    cursor: pointer;
+  }

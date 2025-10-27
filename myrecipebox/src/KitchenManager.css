@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+
+
+.kitchen-board {
+    background-color: aqua;
+  /* background-color: #f5e2b8; */
+  background-image: radial-gradient(#c7a978 1px, transparent 1px);
+  background-size: 10px 10px;
+  border-radius: 25px;
+  box-shadow: inset 0 0 40px rgba(139, 69, 19, 0.4);
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 90%;
+  font-family: "Handlee", cursive;
+  text-align: center;
+}
+
+.kitchen-title {
+  font-size: 2rem;
+  color: #3b2f2f;
+  margin-bottom: 0.25rem;
+}
+
+.kitchen-subtitle {
+  margin-bottom: 1.5rem;
+  color: #6b4e2d;
+  font-style: italic;
+}
+
+
+.kitchen-columns {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+.kitchen-card {
+  background-color: #fffdf5;
+  border-radius: 20px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  width: 350px;
+  min-height: 300px;
+  text-align: left;
+  border: 2px solid #deb887;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.kitchen-card:hover {
+  transform: translateY(-3px);
+}
+
+.kitchen-card h3 {
+  text-align: center;
+  color: #3b2f2f;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+
+.kitchen-card.pantry {
+  background-color: #fffaf1;
+}
+
+.kitchen-card.shopping {
+  background-color: #f6fff4;
+}
+
+
+.kitchen-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.kitchen-form input {
+  font-family: "Handlee", cursive;
+  border: 2px solid #d2b48c;
+  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  background-color: #fff9e8;
+  width: 65%;
+}
+
+.kitchen-form button {
+  border: none;
+  background-color: #fcd77f;
+  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  font-family: "Handlee", cursive;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.kitchen-form button:hover {
+  background-color: #fcbf49;
+}
+
+
+.kitchen-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kitchen-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #d2b48c;
+  padding: 0.4rem 0;
+  font-size: 1.1rem;
+  color: #3b2f2f;
+}
+
+.placeholder {
+  color: #999;
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+
+.item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.done-btn {
+  background-color: #b8e89b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  font-family: "Handlee", cursive;
+  font-size: 0.9rem;
+  transition: 0.2s ease;
+}
+
+.done-btn:hover {
+  background-color: #a3df7a;
+}
+
+.remove-btn {
+  background-color: #ffb6b6;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  font-family: "Handlee", cursive;
+  font-size: 0.9rem;
+  transition: 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #ff7a7a;
+}
+
+
+.find-btn {
+  background-color: #ffe599;
+  border: none;
+  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-family: "Handlee", cursive;
+  font-weight: bold;
+  margin-top: 0.75rem;
+  transition: 0.2s;
+  width: 100%;
+  text-align: center;
+  box-shadow: 2px 2px rgba(0,0,0,0.1);
+}
+
+.find-btn:hover {
+  background-color: #fcd77f;
+}
+
+
+.match-section {
+  margin-top: 1rem;
+  background-color: #fffaf1;
+  border-radius: 10px;
+  padding: 0.8rem;
+  border: 1px dashed #d2b48c;
+}
+
+.match-section h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: #3b2f2f;
+  text-align: center;
+}
+
+.match-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.match-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px dotted #deb887;
+  font-size: 1rem;
+  color: #3b2f2f;
+  line-height: 1.3;
+}
+
+.match-list li:last-child {
+  border-bottom: none;
+}
+
+.match-cat {
+  color: #7b5a2f;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 800px) {
+  .kitchen-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kitchen-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}

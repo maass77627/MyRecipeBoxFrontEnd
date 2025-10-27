@@ -1,0 +1,152 @@
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Patrick+Hand&display=swap");
+
+.mealplanner-container {
+  background-color: #f5e2b8;
+  background-image: radial-gradient(#c7a978 1px, transparent 1px);
+  background-size: 10px 10px;
+  border-radius: 25px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 95%;
+  box-shadow: inset 0 0 40px rgba(139, 69, 19, 0.4);
+  font-family: "Patrick Hand", cursive;
+  position: relative;
+}
+
+.planner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: #3b2f2f;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.planner-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.planner-btn {
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Handlee", cursive;
+  transition: 0.3s ease;
+}
+
+.planner-btn.random {
+  background-color: #fcd77f;
+  box-shadow: 2px 2px #c5a059;
+}
+
+.planner-btn.random:hover {
+  background-color: #fcbf49;
+  transform: translateY(-2px);
+}
+
+.planner-btn.clear {
+  background-color: #f8b6b6;
+  box-shadow: 2px 2px #d17e7e;
+}
+
+.planner-btn.clear:hover {
+  background-color: #f87c7c;
+  transform: translateY(-2px);
+}
+
+
+.planner-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); 
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: start;
+}
+
+.planner-day {
+  background-color: #fffdf5;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  border: 2px solid #deb887;
+  width: 90%;
+  max-width: 220px; 
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.planner-day:hover {
+  transform: translateY(-5px);
+}
+
+.planner-day::before {
+  content: "📍";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+}
+
+.planner-day h3 {
+  color: #3b2f2f;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+select {
+  font-family: "Handlee", cursive;
+  border: 2px solid #d2b48c;
+  border-radius: 8px;
+  padding: 0.3rem;
+  width: 90%;
+  background-color: #fff9e8;
+}
+
+.planner-placeholder {
+  color: #aaa;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.planner-recipe-card {
+  margin-top: 0.8rem;
+  background-color: #fffaf1;
+  border-radius: 10px;
+  padding: 0.5rem;
+  border: 1px dashed #d2b48c;
+}
+
+.planner-recipe-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.planner-recipe-name {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: #5a3e2b;
+}
+
+.planner-remove-btn {
+  background-color: #ffb6b6;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.planner-remove-btn:hover {
+  background-color: #ff7a7a;
+  transform: translateY(-2px);
+}
