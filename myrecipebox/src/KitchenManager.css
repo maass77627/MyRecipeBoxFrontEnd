@@ -3,8 +3,6 @@
 
 .kitchen-board {
     background-color: aqua;
-  /* background-color: #f5e2b8; */
-  background-image: radial-gradient(#c7a978 1px, transparent 1px);
   background-size: 10px 10px;
   border-radius: 25px;
   box-shadow: inset 0 0 40px rgba(139, 69, 19, 0.4);

@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Pacifico&display=swap");
 
-/* === Overall Header Container === */
+
 .app-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #5e5a9c; */
   background-color: #fff8dc; 
   background-image: linear-gradient(
       to bottom,
@@ -21,7 +20,7 @@
   font-family: "Handlee", cursive;
 }
 
-/* === Left Section (logo + title) === */
+
 .header-left {
   display: flex;
   align-items: center;
@@ -43,7 +42,7 @@
   text-shadow: 1px 1px rgba(255, 123, 123, 0.4);
 }
 
-/* === Navigation Links === */
+
 .header-nav {
   display: flex;
   gap: 1.5rem;

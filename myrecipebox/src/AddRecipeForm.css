@@ -137,13 +137,13 @@
     background-color: #ccc;
   }
 
-  /* === Container === */
+  
 .add-recipe-container {
     text-align: center;
     margin: 2rem 0;
   }
   
-  /* === Trigger Button === */
+  
   .add-recipe-btn {
     background: linear-gradient(135deg, #ffa07a, #ff7b7b);
     color: white;
@@ -162,7 +162,7 @@
     box-shadow: 0 12px 20px rgba(255, 123, 123, 0.3);
   }
   
-  /* === Overlay Background === */
+  
   .overlay {
     position: fixed;
     inset: 0;
@@ -173,7 +173,7 @@
     z-index: 50;
   }
   
-  /* === Recipe Card Form === */
+ 
   .recipe-card-form {
     background-color: #fff8dc;
     background-image: linear-gradient(
@@ -195,13 +195,13 @@
     transition: transform 0.4s ease-out, opacity 0.4s ease-out;
   }
   
-  /* Flip open animation */
+  
   .recipe-card-form.flipped {
     transform: rotateY(0deg);
     opacity: 1;
   }
   
-  /* === Title === */
+  
   .form-title {
     text-align: center;
     font-size: 1.5rem;
@@ -210,7 +210,7 @@
     font-family: "Pacifico", cursive;
   }
   
-  /* === Form Fields === */
+  
   .recipe-form label {
     display: flex;
     flex-direction: column;
@@ -240,14 +240,14 @@
     transition: border-bottom-color 0.2s ease;
   }
   
-  /* Focus and hover effects */
+  
   .recipe-form input:focus,
   .recipe-form textarea:focus,
   .recipe-form select:focus {
     border-bottom-color: #ff7b7b;
   }
   
-  /* === Dropdown styling === */
+  
   .recipe-form select {
     cursor: pointer;
     padding: 0.3rem 0;
@@ -258,7 +258,7 @@
     background-size: 1.2rem;
   }
   
-  /* === Buttons === */
+  
   .form-buttons {
     display: flex;
     justify-content: space-between;
@@ -276,7 +276,7 @@
     transition: background-color 0.15s ease, transform 0.15s ease;
   }
   
-  /* Save button */
+  
   .save-btn {
     background-color: #ff7b7b;
     color: white;
@@ -287,7 +287,7 @@
     transform: translateY(-2px);
   }
   
-  /* Cancel button */
+  
   .cancel-btn {
     background-color: #ddd;
     color: #333;
@@ -298,5 +298,4 @@
     transform: translateY(-2px);
   }
   
-  /* === Font Imports === */
   @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Pacifico&display=swap");
